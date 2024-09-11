@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>My World Clocks</title>
   </head>
   <body>
@@ -18,25 +20,19 @@
         <option value="">New York</option>
       </select>
 
-      <div class="city">
+      <div class="city" id="cairo">
         <div class="name-date">
-          <h2>Dublin 🕛</h2>
-          <div class="date">September 11, 2024</div>
+          <h2>Cairo 🕛</h2>
+          <div class="date"></div>
         </div>
-        <div class="time">
-          11:10
-          <div class="am-pm">am</div>
-        </div>
+        <div class="time"></div>
       </div>
-      <div class="city">
+      <div class="city" id="Rome">
         <div class="name-date">
-          <h2>Durban 🕛</h2>
-          <div class="date">September 11, 2024</div>
+          <h2>Rome 🕛</h2>
+          <div class="date"></div>
         </div>
-        <div class="time">
-          11:10
-          <div class="am-pm">am</div>
-        </div>
+        <div class="time"></div>
       </div>
     </div>
     <script src="src/index.js"></script>
