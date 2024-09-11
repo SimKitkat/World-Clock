@@ -1,12 +1,12 @@
 body {
-  background-color: white;
   font-family: monospace;
+  color: white;
 }
 
 .container {
   max-width: 600px;
   margin: 60px auto;
-  background: white;
+  background-image: url(https://i.imgur.com/OFZhj5a.jpeg);
   padding: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
@@ -24,7 +24,6 @@ select {
   margin: 10px 0;
   justify-content: space-between;
   padding: 30px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 .date {
   font-size: 20px;
