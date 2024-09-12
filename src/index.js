@@ -50,11 +50,6 @@ function updateCity(event) {
   )}</small></div>
   </div>
   `;
-
-  let yourCurrentElement = document.querySelector("#yourCurrent");
-  let yourCurrent = moment.tz.guess();
-
-  yourCurrentElement.innerHTML = yourCurrent;
 }
 updateTime();
 setInterval(updateTime, 1000);
