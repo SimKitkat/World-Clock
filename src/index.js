@@ -20,6 +20,20 @@ function updateTime() {
     RomeTimeElement.innerHTML = RomeTime.format("h:mm:ss [<small>]A[</small>]");
   }
 }
+
+function currentLocation() {
+  let yourCurrent = moment.tz.guess().replace("_", " ").split("/")[1];
+  let yourCurrentElement = document.querySelector("#currentCity");
+
+  yourCurrentElement.innerHTML = yourCurrent;
+  let currentDateElement = document.querySelector(".currentDate");
+  let currentTimeElement = document.querySelector(".currentTime");
+  currentCityTime = moment.tz(yourCurrent);
+  currentDateElement.innerHTML = currentCityTime.format("MMMM	Do YYYY");
+  currentTimeElement.innerHTML = `${currentCityTime.format(
+    "h:mm:ss"
+  )} <small>${currentCityTime.format("A")}</small>`;
+}
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
@@ -36,9 +50,15 @@ function updateCity(event) {
   )}</small></div>
   </div>
   `;
+
+  let yourCurrentElement = document.querySelector("#yourCurrent");
+  let yourCurrent = moment.tz.guess();
+
+  yourCurrentElement.innerHTML = yourCurrent;
 }
 updateTime();
 setInterval(updateTime, 1000);
+setInterval(currentLocation, 1);
 
 let citiesSelectElement = document.querySelector("#cityoptions");
 citiesSelectElement.addEventListener("change", updateCity);
