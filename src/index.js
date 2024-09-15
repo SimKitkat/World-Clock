@@ -22,10 +22,10 @@ function updateTime() {
 }
 
 function currentLocation() {
-  let yourCurrent = moment.tz.guess().replace("_", " ").split("/")[1];
+  let yourCurrent = moment.tz.guess();
   let yourCurrentElement = document.querySelector("#currentCity");
 
-  yourCurrentElement.innerHTML = yourCurrent;
+  yourCurrentElement.innerHTML = yourCurrent.replace("_", " ").split("/")[1];
   let currentDateElement = document.querySelector(".currentDate");
   let currentTimeElement = document.querySelector(".currentTime");
   currentCityTime = moment.tz(yourCurrent);
